@@ -1,4 +1,4 @@
-class Gate
+class Ticket
   def initialize(fare)
     @fare = fare
   end
