@@ -1,21 +1,25 @@
-class Product
-  attr_reader :name,:price
+class   Dog
+  @@type = "犬"
 
-  def initialize(name,price)
-    @name = name
-    @price = price
+  def initialize(name,dog_type)
+    @name = "マロン"
+    @dog_type = "トイプードル"
   end
 
-  def self.format_price(price)
-    "#{price}円"
+  def self.say
+    puts "わんわん"
+  end
+  
+  def say_type
+    puts "私は#{@@type}です"
   end
 
-  def to_s
-    format_price = Product.format_price(price)
-    "name: #{name},  price: #{format_price}"
+  def self_introduction
+    puts "わたしの名前は#{@name}で種類は#{@dog_type}です"
   end
-
 end
 
-product = Product.new('A great movie' , 1000)
-puts  product.to_s
+dog = Dog.new("マロン" ,"トイプードル")
+ puts dog.self_introduction
+ dog.say_type
+  Dog.say
