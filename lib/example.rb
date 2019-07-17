@@ -1,25 +1,22 @@
-class   Dog
-  @@type = "犬"
+class Fruits
+  @@sum = 0
 
-  def initialize(name,dog_type)
-    @name = "マロン"
-    @dog_type = "トイプードル"
-  end
+  attr_accessor :name,:price
 
-  def self.say
-    puts "わんわん"
+  def initialize(name,price)
+    @name = name
+    @price = price
+    @@sum += price
   end
   
-  def say_type
-    puts "私は#{@@type}です"
+  def self.get_sum
+    "合計金額は#{@@sum}です"
   end
 
-  def self_introduction
-    puts "わたしの名前は#{@name}で種類は#{@dog_type}です"
-  end
 end
 
-dog = Dog.new("マロン" ,"トイプードル")
- puts dog.self_introduction
- dog.say_type
-  Dog.say
+a = Fruits.new("apple",120)
+b = Fruits.new("orange",200)
+c = Fruits.new("starrawberry",60)
+
+puts Fruits.get_sum
