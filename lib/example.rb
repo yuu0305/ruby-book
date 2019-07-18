@@ -1,5 +1,6 @@
 class Food
   @@foods = []
+  attr_accessor :food,:calory
 
   def self.input
     puts "ご飯を入力してね"
@@ -27,13 +28,13 @@ class Food
     @calory = calory
   end
 
-  def food
-    return @food
-  end
+  # def food
+  #   return @food
+  # end
 
-  def calory
-    return @calory
-  end
+  # def calory
+  #   return @calory
+  # end
 
 end
 
