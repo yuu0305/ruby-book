@@ -1,29 +1,21 @@
-module Loggable
-  def log(text)
-    puts "[LOG] #{text}"
-  end
-end
-
-class Product
-  include Loggable
-
-  def title
-    log 'title is called'
-    'A great movie'
+module NameChanger
+  def change_name
+    @name = 'せがわ'
   end
 end
 
 class User
-  include Loggable
+  include NameChanger
   
-  def name
-    log 'name is called'
-    'Alice'
+  attr_reader  :name
+
+  def initialize(name)
+    @name = name
   end
 end
 
-product = Product.new
-product.title
+user = User.new('yuu')
+p user.name
 
-user = User.new
-user.name
+user.change_name
+p user.name
