@@ -1,11 +1,15 @@
-begin
-  1/0
-rescue NoMethodError
-  puts 'NoMethodErrorです。'
-rescue NameError
-  puts 'NameErrorです。'
-rescue ZeroDivisionError
-  puts 'ZeroDivisionErrorです。'
-rescue StandardError
-  puts 'StandardErrorです。'
+def currency(country)
+  case country
+  when :japan
+    puts 'yen'
+  when :us 
+    puts 'dollar'
+  when :india
+    puts 'rupee'
+  else 
+    raise "無効な国名(#{country})です"
+  end
 end
+
+currency(:japan)
+currency(:italy)
