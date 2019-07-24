@@ -1,14 +1,11 @@
-puts 'start.'
-module Greeter
-  def hello
-    'hello'
-  end
-end
-
 begin
-  greeter = Greeter.new
-rescue 
-  puts '例外発生、飛ばして実行'
+  1/0
+rescue NoMethodError
+  puts 'NoMethodErrorです。'
+rescue NameError
+  puts 'NameErrorです。'
+rescue ZeroDivisionError
+  puts 'ZeroDivisionErrorです。'
+rescue StandardError
+  puts 'StandardErrorです。'
 end
-
-puts 'END.'
