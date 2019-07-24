@@ -4,6 +4,11 @@ module Greeter
     'hello'
   end
 end
-greeter = Greeter.new
+
+begin
+  greeter = Greeter.new
+rescue 
+  puts '例外発生、飛ばして実行'
+end
 
 puts 'END.'
