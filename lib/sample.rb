@@ -1,5 +1,8 @@
+first =  gets.to_i
+second = gets.to_i
+
 begin
-  1/0
+  puts "計算結果:[#{first/second.to_f}]...calc成功です。"
 rescue NoMethodError
   puts  "NoMethodError"
 rescue NameError
