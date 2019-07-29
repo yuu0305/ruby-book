@@ -1,16 +1,9 @@
-def currency(country)
-  case country
-  when "japan"
-    puts 'yen'
-  when ":us" 
-    puts 'dollar'
-  when :"india"
-    puts 'rupee'
-  else 
-    raise "無効な国名(#{country})です"
-  end
+begin
+  1/0
+rescue NoMethodError
+  puts  "NoMethodError"
+rescue NameError
+  puts "NameError"
+rescue StandardError
+  puts  "その他のエラーです。"
 end
-
-input = gets.chomp
-currency(input)
-
