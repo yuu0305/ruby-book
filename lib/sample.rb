@@ -1,15 +1,12 @@
-def currency(country)
-  case country
-  when :japan
-    puts 'yen'
-  when :us 
-    puts 'dollar'
-  when :india
-    puts 'rupee'
-  else 
-    raise "無効な国名(#{country})です"
-  end
-end
+first =  gets.to_i
+second = gets.to_i
 
-currency(:japan)
-currency(:italy)
+begin
+  puts "計算結果:[#{first/second.to_f}]...calc成功です。"
+rescue NoMethodError
+  puts  "NoMethodError"
+rescue NameError
+  puts "NameError"
+rescue StandardError
+  puts  "その他のエラーです。"
+end
