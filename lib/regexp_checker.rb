@@ -1,3 +1,4 @@
 print 'Text?:'
 text = gets.chomp
-puts text
+print 'Pattern?:'
+pattern = gets.chomp
