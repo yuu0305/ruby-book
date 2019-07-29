@@ -1,15 +1,16 @@
 def currency(country)
   case country
-  when :japan
+  when "japan"
     puts 'yen'
-  when :us 
+  when ":us" 
     puts 'dollar'
-  when :india
+  when :"india"
     puts 'rupee'
   else 
     raise "無効な国名(#{country})です"
   end
 end
 
-currency(:japan)
-currency(:italy)
+input = gets.chomp
+currency(input)
+
