@@ -1,9 +1,11 @@
 def greeting
   puts "hello"
-  yield 
+  text = yield 'こんにちは'
+  # text = yield("こんにちは")
+  puts text
   puts "good night"
 end
 
-greeting do
-puts "good morning"
+greeting do |text|
+  text * 2
 end 
