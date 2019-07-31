@@ -1,4 +1,4 @@
-def greeting(&block)
+def greeting(block)
   puts "hello"
   text = block.call('こんにちは')
   # text = yield("こんにちは")
@@ -8,4 +8,4 @@ end
 
 proc = Proc.new{|text|text * 2}
 
-greeting(&proc)
+greeting(proc)
