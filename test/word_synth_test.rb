@@ -3,9 +3,9 @@ require '../lib/word_synth'
 require '../lib/effects'
 
 
-class WordSynthTest <  Minitest::Test
-  def test_play
-    assert WordSynth
-    assert Effects
+class WordSynthTest < Minitest::Test
+  def test_play_with_effects
+    synth = WordSynth.new
+    assert_equal 'Ruby is fun!' , synth.play('Ruby is fun!')
   end
 end
