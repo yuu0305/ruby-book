@@ -12,5 +12,5 @@ class WordSynth
       effect.call(words)
     end
   end
-
+  
 end
